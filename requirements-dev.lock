@@ -15,6 +15,7 @@ django==5.0.6
     # via djangoapi
 psycopg==3.1.19
     # via djangoapi
+ruff==0.5.0
 sqlparse==0.5.0
     # via django
 typing-extensions==4.12.2

@@ -12,11 +12,15 @@
 asgiref==3.8.1
     # via django
 django==5.0.6
+    # via django-debug-toolbar
+    # via djangoapi
+django-debug-toolbar==4.4.2
     # via djangoapi
 psycopg==3.1.19
     # via djangoapi
 sqlparse==0.5.0
     # via django
+    # via django-debug-toolbar
 typing-extensions==4.12.2
     # via psycopg
 tzdata==2024.1

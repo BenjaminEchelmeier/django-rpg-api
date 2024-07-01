@@ -1,10 +1,9 @@
 from django.db import models
 from django.utils import timezone
 import datetime
+from django.contrib import admin
 
 # Create your models here.
-from django.db import models
-from django.contrib import admin
 
 
 class Question(models.Model):

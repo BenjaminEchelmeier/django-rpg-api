@@ -14,7 +14,12 @@ asgiref==3.8.1
 django==5.0.6
     # via django-debug-toolbar
     # via djangoapi
+    # via djangorestframework
 django-debug-toolbar==4.4.2
+    # via djangoapi
+djangorestframework==3.15.2
+    # via djangoapi
+markdown==3.6
     # via djangoapi
 psycopg==3.1.19
     # via djangoapi

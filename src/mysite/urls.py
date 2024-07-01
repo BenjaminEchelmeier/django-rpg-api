@@ -17,9 +17,18 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+
+def root_index_redirect(request) -> HttpResponseRedirect:
+    return HttpResponseRedirect(reverse("rpg_manager:index"))
+
 
 urlpatterns = [
+    path("", root_index_redirect),
     path("polls", include("polls.urls")),
+    path("rpg_manager", include("rpg_manager.urls")),
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
 ]

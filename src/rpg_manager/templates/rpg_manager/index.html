@@ -1,13 +1,28 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+{% block title %}
+  RPG Manager
+{% endblock %}
 
-{% if player_list %}
+{% block banner %}
+  <h2>RPG Manger</h2>
+  <p>A responsive template by HTML5 UP</p>
+{% endblock %}
+
+{% block content_header %}
+  Players
+{% endblock %}
+
+{% block content_body %}
+  {% if player_list %}
     <ul>
-    {% for player in player_list %}
-        <li><a href="{% url 'rpg_manager:player_detail' player.id %}">{{ player.name }}</a></li>
-    {% endfor %}
+      {% for player in player_list %}
+        <li>
+          <a href="{% url 'rpg_manager:player-detail' player.id %}">{{ player.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
-{% else %}
+  {% else %}
     <p>No players are available.</p>
-{% endif %}
+  {% endif %}
+{% endblock %}

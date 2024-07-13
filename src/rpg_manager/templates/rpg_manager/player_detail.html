@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  RPGM: {{ player.name }}
+{% endblock %}
+
+{% block intro %}
+  <h1>{{ player.name }}</h1>
+  <p>{{ player.get_characters }}</p>
+
+  <a class="btn" href="{% url 'rpg_manager:create-char' %}">Create a Character</a>
+{% endblock %}

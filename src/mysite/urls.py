@@ -28,7 +28,7 @@ def root_index_redirect(request) -> HttpResponseRedirect:
 urlpatterns = [
     path("", root_index_redirect),
     path("polls", include("polls.urls")),
-    path("rpg_manager", include("rpg_manager.urls")),
+    path("rpg_manager/", include("rpg_manager.urls")),
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
 ]

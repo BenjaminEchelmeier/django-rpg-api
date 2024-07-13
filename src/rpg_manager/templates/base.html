@@ -1,0 +1,42 @@
+{% extends 'dopetrope/dope_base.html' %}
+
+{% block logo %}
+  RPG Manager
+{% endblock %}
+
+{% block nav_contents %}
+  <li class="current">
+    <a href="{% url 'rpg_manager:index' %}">Home</a>
+  </li>
+  <li>
+    <a href="{% url 'rpg_manager:create-char' %}">Create Character</a>
+  </li>
+  {% comment %} <li>
+    <a href="right-sidebar.html">Right Sidebar</a>
+  </li>
+  <li>
+    <a href="no-sidebar.html">No Sidebar</a>
+  </li> {% endcomment %}
+{% endblock %}
+
+{% block banner %}
+
+{% endblock %}
+
+{% block intro %}
+
+{% endblock %}
+
+{% block content_header %}
+
+{% endblock %}
+
+{% block content_body %}
+{% endblock %}
+
+{% block blog %}
+
+{% endblock %}
+{% block footer_contents %}
+
+{% endblock %}

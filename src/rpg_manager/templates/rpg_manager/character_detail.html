@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ character.name }}
+{% endblock %}
+
+{% block intro %}
+  <h1>{{ character.name }}</h1>
+  <p>{{ character.get_classes }}</p>
+  <h1>Primary Class: {{ character.primary_class }}</h1>
+  {% if character.primary_class %}
+    {{ character.primary_class }}
+  {% endif %}
+  {% for class in character.get_classes %}
+    <h2>{{ class.class_name }}</h2>
+  {% endfor %}
+
+  <a class="btn" href="{% url 'rpg_manager:edit-char' character.id %}">Add a subclass</a>
+{% endblock %}

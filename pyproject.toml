@@ -23,6 +23,7 @@ build-backend = "hatchling.build"
 managed          = true
 dev-dependencies = [
     "ruff>=0.5.0",
+    "ipdb>=0.13.13",
 ]
 
 [tool.hatch.metadata]
